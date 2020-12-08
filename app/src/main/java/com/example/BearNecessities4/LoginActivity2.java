@@ -21,7 +21,6 @@ public class LoginActivity2 extends AppCompatActivity {
 
     private FirebaseAuth auth;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,23 +28,27 @@ public class LoginActivity2 extends AppCompatActivity {
 
         email = findViewById(R.id.email);
         password = findViewById(R.id.password);
-        login = findViewById(R.id.login);
+        login = findViewById(R.id.login2);
 
                 auth = FirebaseAuth.getInstance();
 
-        login.setOnClickListener(v -> {
-            String txt_email = email.getText().toString();
-            String txt_password = password.getText().toString();
-            loginUser(txt_email, txt_password);
-            finish();
-        });
-    }
+                login.setOnClickListener(new View.OnClickListener(){
+                    @Override
+                    public void onClick(View v){
+                    String txt_email = email.getText().toString();
+                    String txt_password = password.getText().toString();
+                    loginUser(txt_email,txt_password);
+                    }
+                });
+                }
 
-    private void loginUser(String txt_email, String txt_password) {  ////Check here...Not sure why it is txt_email and not just email
-        auth.signInWithEmailAndPassword(txt_email, txt_password).addOnSuccessListener(authResult -> {
-            Toast.makeText(LoginActivity2.this, "Login Successful", Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(LoginActivity2.this,MainActivity.class));
-            finish();
-        });                      ////Check here...Not sure why it is txt_email and not just email
-    }
-}
+    private void loginUser(String email, String password) {
+
+        auth.signInWithEmailAndPassword (email , password).addOnSuccessListener (new OnSuccessListener<AuthResult> () {
+            @Override
+            public void onSuccess (AuthResult authResult) {
+                Toast.makeText (LoginActivity2.this , "Login Successful" , Toast.LENGTH_SHORT).show ();
+                startActivity (new Intent (LoginActivity2.this , MainActivity.class));
+                finish ();
+            }
+        });}}

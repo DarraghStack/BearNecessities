@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="250dp"
-        android:hint="email" />
+        android:hint="@string/email" />
 
     <EditText
         android:id="@+id/password"
@@ -21,23 +21,24 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/email"
         android:layout_marginTop="97dp"
-        android:hint="password" />
+        android:hint="@string/password" />
 
     <Button
         android:id="@+id/register"
-        android:layout_width="394dp"
-        android:layout_height="59dp"
+        android:layout_width="398dp"
+        android:layout_height="77dp"
         android:layout_below="@id/password"
-        android:layout_marginTop="19dp"
-        android:text="register"
-        android:visibility="visible"
-        tools:visibility="visible" />
+        android:layout_marginTop="24dp"
+        android:text="@string/register"
+        android:visibility="visible" />
 
     <ImageView
         android:id="@+id/Logo"
-        android:layout_width="390dp"
+        android:layout_width="402dp"
         android:layout_height="wrap_content"
         android:layout_alignTop="@id/register"
-        android:layout_marginTop="-470dp"
-        android:src="@drawable/bearlogo" />
+        android:layout_marginTop="-478dp"
+        android:src="@drawable/bearlogo"
+        android:visibility="visible"
+        tools:visibility="visible" />
 </RelativeLayout>

@@ -1,4 +1,4 @@
-package com.example.bearnecetties4;
+package com.example.BearNecessities4;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.example.bearnecetties4", appContext.getPackageName());
+        assertEquals("com.example.BearNecessities4", appContext.getPackageName());
     }
 }

@@ -10,14 +10,14 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="email"
+        android:hint="@string/email"
         android:id="@+id/email"
         android:layout_marginTop="100dp" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="password"
-        android:id="@+id/password"
+        android:hint="@string/password"
+        android:id="@+id/Password"
         android:layout_below="@id/email"
         android:layout_marginTop="10dp"
         />
@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
-        android:layout_below="@id/password"
+        android:layout_below="@id/Password"
         android:text="LOGIN"
         android:id="@+id/login"
         android:layout_alignParentEnd="true"/>

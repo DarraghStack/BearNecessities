@@ -1,4 +1,4 @@
-package com.example.bearnecetties4;
+package com.example.BearNecessities4;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -33,24 +33,19 @@ public class LoginActivity2 extends AppCompatActivity {
 
                 auth = FirebaseAuth.getInstance();
 
-        login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String txt_email = email.getText().toString();
-                String txt_password = password.getText().toString();
-                loginUser(txt_email, txt_password);
-            }
+        login.setOnClickListener(v -> {
+            String txt_email = email.getText().toString();
+            String txt_password = password.getText().toString();
+            loginUser(txt_email, txt_password);
+            finish();
         });
     }
 
     private void loginUser(String txt_email, String txt_password) {  ////Check here...Not sure why it is txt_email and not just email
-        auth.signInWithEmailAndPassword(txt_email, txt_password).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
-            @Override
-            public void onSuccess(AuthResult authResult) {
-                Toast.makeText(LoginActivity2.this, "Login Successful", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(LoginActivity2.this,MainActivity.class));
-                finish();
-            }
+        auth.signInWithEmailAndPassword(txt_email, txt_password).addOnSuccessListener(authResult -> {
+            Toast.makeText(LoginActivity2.this, "Login Successful", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(LoginActivity2.this,MainActivity.class));
+            finish();
         });                      ////Check here...Not sure why it is txt_email and not just email
     }
 }

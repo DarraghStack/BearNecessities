@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.bearnecetties4">
+    package="com.example.BearNecessities4">
 
     <application
         android:allowBackup="true"
@@ -9,10 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BearNecetties4">
-        <activity android:name=".MainActivity"/>
-        <activity android:name=".LoginActivity2" />
-        <activity android:name=".RegisterActivity2" />
-        <activity android:name=".StartActivity">
+        <activity android:name="com.example.BearNecessities4.AddEditOne" />
+        <activity android:name="com.example.BearNecessities4.MainActivity" />
+        <activity android:name="com.example.BearNecessities4.LoginActivity2" />
+        <activity android:name="com.example.BearNecessities4.RegisterActivity2" />
+        <activity android:name="com.example.BearNecessities4.StartActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

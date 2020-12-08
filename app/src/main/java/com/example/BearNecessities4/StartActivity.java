@@ -1,4 +1,4 @@
-package com.example.bearnecetties4;
+package com.example.BearNecessities4;
 
 import androidx.appcompat.app.AppCompatActivity;
 
